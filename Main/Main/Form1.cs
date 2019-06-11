@@ -37,41 +37,22 @@ namespace Main
         private void Form1_Load(object sender, EventArgs e)
         {
             this.MouseDown += new MouseEventHandler(this.gPanelTitleBack_MouseDown);
+            GeneratePathUI(sender,e);
         }
-
 
         private void Close_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-
-        private void Doit_Click(object sender, EventArgs e)
+        private void Junction(object sender, EventArgs e)
         {
 
         }
 
-        private void AddStart_Click(object sender, EventArgs e)
+        private void GeneratePathUI(object sender, EventArgs e)
         {
-            FolderBrowserDialog dialog = new FolderBrowserDialog();
-            dialog.Description = "请选择路径";
-
-            if (dialog.ShowDialog() == DialogResult.OK)
-            {
-                StartPath.Text = dialog.SelectedPath;
-            }
+            PathUIGenerator pathUIGenerator = new PathUIGenerator(this);
         }
-
-        private void AddEnd_Click(object sender, EventArgs e)
-        {
-            FolderBrowserDialog dialog = new FolderBrowserDialog();
-            dialog.Description = "请选择路径";
-
-            if (dialog.ShowDialog() == DialogResult.OK)
-            {
-                endPath.Text = dialog.SelectedPath;
-            }
-        }
-
     }
 }

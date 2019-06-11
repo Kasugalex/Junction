@@ -29,16 +29,11 @@
         private void InitializeComponent()
         {
             this.Close = new System.Windows.Forms.PictureBox();
-            this.Start = new System.Windows.Forms.Label();
-            this.End = new System.Windows.Forms.Label();
-            this.StartPath = new System.Windows.Forms.TextBox();
-            this.endPath = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.AddPath = new System.Windows.Forms.Label();
+            this.Generate = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.Close)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // Close
@@ -47,106 +42,59 @@
             this.Close.BackgroundImage = global::Main.Properties.Resources.Close;
             this.Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Close.Location = new System.Drawing.Point(452, 12);
+            this.Close.Location = new System.Drawing.Point(855, 7);
             this.Close.Name = "Close";
             this.Close.Size = new System.Drawing.Size(36, 32);
             this.Close.TabIndex = 0;
             this.Close.TabStop = false;
             this.Close.Click += new System.EventHandler(this.Close_Click);
             // 
-            // Start
+            // AddPath
             // 
-            this.Start.Font = new System.Drawing.Font("微软雅黑", 14F);
-            this.Start.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Start.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Start.Location = new System.Drawing.Point(27, 78);
-            this.Start.Name = "Start";
-            this.Start.Size = new System.Drawing.Size(60, 23);
-            this.Start.TabIndex = 1;
-            this.Start.Text = "Start:";
-            this.Start.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.AddPath.Font = new System.Drawing.Font("微软雅黑", 13F);
+            this.AddPath.Location = new System.Drawing.Point(28, 12);
+            this.AddPath.Name = "AddPath";
+            this.AddPath.Size = new System.Drawing.Size(86, 23);
+            this.AddPath.TabIndex = 7;
+            this.AddPath.Text = "添加路径";
+            this.AddPath.Click += new System.EventHandler(this.GeneratePathUI);
             // 
-            // End
+            // Generate
             // 
-            this.End.Font = new System.Drawing.Font("微软雅黑", 14F);
-            this.End.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.End.Location = new System.Drawing.Point(32, 130);
-            this.End.Name = "End";
-            this.End.Size = new System.Drawing.Size(55, 25);
-            this.End.TabIndex = 2;
-            this.End.Text = "End:";
-            this.End.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Generate.Font = new System.Drawing.Font("微软雅黑", 13F);
+            this.Generate.Location = new System.Drawing.Point(120, 12);
+            this.Generate.Name = "Generate";
+            this.Generate.Size = new System.Drawing.Size(84, 23);
+            this.Generate.TabIndex = 8;
+            this.Generate.Text = "链接路径";
+            this.Generate.Click += new System.EventHandler(this.Junction);
             // 
-            // StartPath
+            // panel1
             // 
-            this.StartPath.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.StartPath.Font = new System.Drawing.Font("微软雅黑", 13F);
-            this.StartPath.Location = new System.Drawing.Point(93, 80);
-            this.StartPath.Name = "StartPath";
-            this.StartPath.Size = new System.Drawing.Size(293, 30);
-            this.StartPath.TabIndex = 3;
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Location = new System.Drawing.Point(32, 38);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(859, 1);
+            this.panel1.TabIndex = 9;
             // 
-            // endPath
+            // panel2
             // 
-            this.endPath.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.endPath.Font = new System.Drawing.Font("微软雅黑", 13F);
-            this.endPath.Location = new System.Drawing.Point(93, 130);
-            this.endPath.Name = "endPath";
-            this.endPath.Size = new System.Drawing.Size(293, 30);
-            this.endPath.TabIndex = 4;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::Main.Properties.Resources.Add;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Location = new System.Drawing.Point(392, 78);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.AddStart_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImage = global::Main.Properties.Resources.Add;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Location = new System.Drawing.Point(392, 131);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.AddEnd_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Font = new System.Drawing.Font("宋体", 18F);
-            this.button1.Location = new System.Drawing.Point(125, 182);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(234, 56);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Do♂it";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Doit_Click);
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Location = new System.Drawing.Point(113, 16);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1, 20);
+            this.panel2.TabIndex = 10;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(500, 250);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.endPath);
-            this.Controls.Add(this.StartPath);
-            this.Controls.Add(this.End);
-            this.Controls.Add(this.Start);
+            this.ClientSize = new System.Drawing.Size(903, 542);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.Generate);
+            this.Controls.Add(this.AddPath);
             this.Controls.Add(this.Close);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
@@ -154,23 +102,17 @@
             this.Text = "Junction";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Close)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.PictureBox Close;
-        private System.Windows.Forms.Label Start;
-        private System.Windows.Forms.Label End;
-        private System.Windows.Forms.TextBox StartPath;
-        private System.Windows.Forms.TextBox endPath;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label AddPath;
+        private System.Windows.Forms.Label Generate;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }
 

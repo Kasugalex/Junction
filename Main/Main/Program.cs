@@ -8,6 +8,7 @@ namespace Main
 {
     static class Program
     {
+        public static int pathIndex = 0;
         /// <summary>
         /// 应用程序的主入口点。
         /// </summary>
