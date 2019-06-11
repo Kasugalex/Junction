@@ -57,6 +57,7 @@
             // Start
             // 
             this.Start.Font = new System.Drawing.Font("微软雅黑", 14F);
+            this.Start.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Start.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Start.Location = new System.Drawing.Point(27, 78);
             this.Start.Name = "Start";
@@ -68,6 +69,7 @@
             // End
             // 
             this.End.Font = new System.Drawing.Font("微软雅黑", 14F);
+            this.End.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.End.Location = new System.Drawing.Point(32, 130);
             this.End.Name = "End";
             this.End.Size = new System.Drawing.Size(55, 25);
@@ -121,19 +123,22 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button1.Font = new System.Drawing.Font("宋体", 18F);
-            this.button1.Location = new System.Drawing.Point(139, 182);
+            this.button1.Location = new System.Drawing.Point(125, 182);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(234, 56);
             this.button1.TabIndex = 7;
             this.button1.Text = "Do♂it";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Doit_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(500, 250);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox2);
