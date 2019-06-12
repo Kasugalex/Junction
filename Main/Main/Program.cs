@@ -9,6 +9,8 @@ namespace Main
     static class Program
     {
         public static int pathIndex = 0;
+
+        public static List<Control> panels = new List<Control>();
         /// <summary>
         /// 应用程序的主入口点。
         /// </summary>
