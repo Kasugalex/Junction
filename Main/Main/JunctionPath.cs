@@ -45,6 +45,12 @@ namespace Main
                 paths.Add(endPath, startPath);
             }
 
+            WindowsJunction(paths);
+
+        }
+
+        private static void WindowsJunction(Dictionary<string, string> paths)
+        {
             string Title = "rem mklink";
             string Templete = "mklink /j \"{0}\" \"{1}\"";
 
@@ -94,7 +100,6 @@ namespace Main
             process.Start();
 
             MessageBox.Show("链接成功！");
-
         }
 
     }
